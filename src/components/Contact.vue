@@ -40,22 +40,22 @@
     name: 'Contact',
     props: ['theme'],
     methods: {
-        sendMessage: function() {
-            var data = {}
-            data['name'] = this.$refs.name.value
-            data['email'] = this.$refs.email.value
-            data['message'] = this.$refs.message.value
-            data['send_message'] = this.$refs.send_message.value
+      sendMessage: function() {
+        var data = {}
+        data['name'] = this.$refs.name.value
+        data['email'] = this.$refs.email.value
+        data['message'] = this.$refs.message.value
+        data['send_message'] = this.$refs.send_message.value
 
-            $.ajax({
-              url: '/static/ajax/send_message.php',
-              method: 'post',
-              data: data,
-              success: function(){
-                alert('message has been sent.')
-              }
-            })
-        }
+        $.ajax({
+          url: '/static/ajax/send_message.php',
+          method: 'post',
+          data: data,
+          success: function(){
+            alert('message has been sent.')
+          }
+        })
+      }
     }
   }
 </script>
